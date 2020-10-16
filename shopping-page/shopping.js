@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.carousel');
-  var instances = M.Carousel.init(elems, {fullWidth: true, indicators: true});
+  const elems = document.querySelectorAll('.carousel');
+  const instances = M.Carousel.init(elems, {fullWidth: true, indicators: true});
+
+  setTimeout(() => {
+     const instance = M.Carousel.getInstance(elems);
+     instance.next();
+  }, 2500);
+
+
 });
